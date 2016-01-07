@@ -10,6 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    
+    @IBOutlet weak var Pais : UILabel!
+    let pais = ColeccionDePaises()
+    
+    @IBOutlet weak var Hamburguesa : UILabel!
+    let hamburguesa = ColeccionDeHamburguesas()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -18,6 +27,13 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+
+    
+    
+    @IBAction func PulsaBoton() {
+        Pais.text = pais.obtenPais()
+        Hamburguesa.text = hamburguesa.obtenHamburguesa()
     }
 
 
